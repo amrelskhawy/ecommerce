@@ -2,7 +2,7 @@ import React from 'react'
 
 export const ProductList = ({ List }) => {
   return (
-    <div className='container mx-auto grid grid-cols-2 sm:grid-cols-3  gap-4 mt-12'>
+    <div className='container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4  gap-4 mt-12'>
       {
         List.map(prod => (
           <Product key={prod.id} product={prod} />
