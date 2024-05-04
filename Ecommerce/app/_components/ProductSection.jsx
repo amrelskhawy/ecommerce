@@ -20,10 +20,8 @@ export const ProductSection = () => {
 
 
   return (
-    <div>
-      {
-        productList.length > 0 &&
-        <ProductList List={productList} />}
+    <div className='p-4'>
+      <ProductList List={productList} />
     </div>
   )
 }
