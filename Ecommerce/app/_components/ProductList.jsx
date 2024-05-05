@@ -1,3 +1,5 @@
+import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 export const ProductList = ({ List }) => {
@@ -14,10 +16,10 @@ export const ProductList = ({ List }) => {
 
 
 const Product = ({ product }) => {
-  const { title, description, price, banner } = product.attributes
+  const { title, category, price, banner } = product.attributes
   const { url } = banner?.data?.attributes?.formats?.thumbnail
   return <div>
-    <a href="#" className="group relative rounded-xl block overflow-hidden">
+    <Link href="#" className="group relative rounded-xl block overflow-hidden">
       <button
         className="absolute end-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75"
       >
@@ -37,16 +39,18 @@ const Product = ({ product }) => {
         </svg>
       </button>
 
-      <img
+      <Image
         src={url}
         alt={title + ' Course banner'}
+        width={500}
+        height={500}
         className="h-48 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-48"
       />
 
       <div className="relative border border-gray-100 bg-white p-6">
-        <span className="whitespace-nowrap bg-primary text-white px-3 py-1.5 text-xs font-medium"> New </span>
+        <span className="whitespace-nowrap bg-primary text-white px-3 py-1.5 text-xs font-medium"> {category} </span>
 
-        <h3 className="mt-4 text-lg font-medium text-gray-900">{title}</h3>
+        <h3 className="mt-4 text-lg font-medium h-16 text-gray-900">{title}</h3>
 
         <p className="mt-1.5 text-sm text-gray-700">$
           {price}</p>
@@ -59,6 +63,6 @@ const Product = ({ product }) => {
           </button>
         </form>
       </div>
-    </a>
+    </Link>
   </div>
 }
