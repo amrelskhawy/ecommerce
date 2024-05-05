@@ -19,7 +19,7 @@ const Product = ({ product }) => {
   const { title, category, price, banner } = product.attributes
   const { url } = banner?.data?.attributes?.formats?.thumbnail
   return <div>
-    <Link href="#" className="group relative rounded-xl block overflow-hidden">
+    <Link href={`/product-details/${product.id}`} className="group relative rounded-xl block overflow-hidden">
       <button
         className="absolute end-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75"
       >
