@@ -381,7 +381,9 @@ export interface ApiProductProduct extends Schema.CollectionType {
     instantDelivery: Attribute.Boolean;
     files: Attribute.Media;
     whatisIncluded: Attribute.Blocks;
-    category: Attribute.Enumeration<['Men', 'Women']>;
+    category: Attribute.Enumeration<
+      ['Tech', 'Marketing', 'Sales', 'Soft Skills']
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

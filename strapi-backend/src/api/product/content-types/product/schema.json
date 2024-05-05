@@ -36,14 +36,15 @@
       "type": "boolean"
     },
     "files": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "whatisIncluded": {
       "type": "blocks"
@@ -51,8 +52,10 @@
     "category": {
       "type": "enumeration",
       "enum": [
-        "Men",
-        "Women"
+        "Tech",
+        "Marketing",
+        "Sales",
+        "Soft Skills"
       ]
     }
   }
