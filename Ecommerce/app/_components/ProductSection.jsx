@@ -21,7 +21,11 @@ export const ProductSection = () => {
 
   return (
     <div className='p-4'>
-      <ProductList List={productList} />
+      {
+        productList.length > 0 ?
+        <ProductList List={productList} /> : 
+        'There is no products added !'
+      }
     </div>
   )
 }
