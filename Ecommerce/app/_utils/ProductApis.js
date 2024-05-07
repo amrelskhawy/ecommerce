@@ -5,8 +5,11 @@ const getLatestProducts = () => axiosClient.get('/products?populate=*').then(res
 
 const getProductByID = (id) => axiosClient.get(`/products/${id}?populate=*`).then(res => res.data)
 
+const getRelatedProductByCategory = (category) => axiosClient.get(`/products?filters[category][$eq]=${category}&populate=*`).then(res => res.data)
+
 
 export default {
     getLatestProducts,
-    getProductByID
+    getProductByID,
+    getRelatedProductByCategory
 }
